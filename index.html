@@ -3,84 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>통합과학2 - 핵심 예상 문제</title>
+  <title>통합과학2 - 환경 변화와 생물다양성 20제</title>
   <style>
-    body { font-family: 'Noto Sans KR', sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
-    .container { max-width: 750px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    h1 { color: #1a73e8; text-align: center; border-bottom: 2px solid #1a73e8; padding-bottom: 10px; }
-    .q-card { background: #fafafa; border: 1px solid #e0e0e0; padding: 18px; margin-bottom: 20px; border-radius: 8px; }
-    .q-title { font-weight: bold; font-size: 16px; margin-bottom: 12px; color: #2c3e50; }
-    .options label { display: block; margin: 8px 0; padding: 10px; background: #fff; border: 1px solid #dcdcdc; border-radius: 6px; cursor: pointer; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; color: #333; }
+    .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    h1 { color: #1a73e8; text-align: center; border-bottom: 2px solid #1a73e8; padding-bottom: 10px; margin-bottom: 5px; }
+    .subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 25px; }
+    .q-card { background: #fafafa; border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 8px; position: relative; }
+    .q-header { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: #fff; }
+    .badge-easy { background-color: #2ec4b6; }
+    .badge-medium { background-color: #ff9f1c; }
+    .badge-hard { background-color: #e71d36; }
+    .badge-prob { background-color: #3a86ff; }
+    .q-title { font-weight: bold; font-size: 16px; color: #2c3e50; line-height: 1.5; margin-bottom: 12px; }
+    .options label { display: block; margin: 8px 0; padding: 10px; background: #fff; border: 1px solid #dcdcdc; border-radius: 6px; cursor: pointer; transition: 0.2s; }
     .options label:hover { background: #e8f0fe; }
-    button { width: 100%; padding: 14px; background: #1a73e8; color: #fff; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px; }
+    .options input[type="radio"] { margin-right: 8px; }
+    button { width: 100%; padding: 15px; background: #1a73e8; color: #fff; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px; }
     button:hover { background: #1557b0; }
-    .result { display: none; margin-top: 25px; padding: 15px; background: #e6f4ea; border: 1px solid #34a853; border-radius: 8px; text-align: center; font-size: 18px; font-weight: bold; color: #137333; }
-    .exp { display: none; margin-top: 10px; padding: 10px; background: #fff8e1; border-left: 4px solid #fbc02d; font-size: 14px; line-height: 1.5; }
+    .result { display: none; margin-top: 25px; padding: 20px; background: #e6f4ea; border: 2px solid #34a853; border-radius: 8px; text-align: center; font-size: 20px; font-weight: bold; color: #137333; }
+    .exp { display: none; margin-top: 12px; padding: 12px; background: #fff8e1; border-left: 4px solid #fbc02d; font-size: 14px; line-height: 1.5; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>통합과학2 시험 대비 핵심 문제</h1>
-    <p style="text-align:center; color:#666;">Ⅰ. 변화와 다양성 - 1. 환경 변화와 생물다양성</p>
+    <h1>통합과학2 적중 예상 20제</h1>
+    <p class="subtitle">Ⅰ. 변화와 다양성 - 1. 환경 변화와 생물다양성</p>
 
-    <!-- Q1 -->
-    <div class="q-card">
-      <div class="q-title">Q1. 표준화석과 시상화석에 대한 설명으로 옳은 것은?</div>
-      <div class="options">
-        <label><input type="radio" name="q1" value="1"> 시상화석은 생존 기간이 짧고 분포 면적이 넓다.</label>
-        <label><input type="radio" name="q1" value="2"> 삼엽충과 공룡은 당대의 온난한 기후 환경을 알려주는 시상화석이다.</label>
-        <label><input type="radio" name="q1" value="3"> 고사리와 산호는 지층이 형성된 시대를 판별하는 표준화석이다.</label>
-        <label><input type="radio" name="q1" value="4"> 표준화석은 생존 기간이 짧고, 분포 면적이 넓으며, 개체 수가 많아야 한다.</label>
+    <form id="quizForm">
+      <!-- 쉬운 난이도 (1~15번) -->
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 95%</span>
+        </div>
+        <div class="q-title">Q1. 지층이 형성된 시대를 알려주는 화석을 무엇이라 하는가?</div>
+        <div class="options">
+          <label><input type="radio" name="q1" value="1"> 시상화석</label>
+          <label><input type="radio" name="q1" value="2"> 표준화석</label>
+          <label><input type="radio" name="q1" value="3"> 시적화석</label>
+          <label><input type="radio" name="q1" value="4"> 잔존화석</label>
+        </div>
+        <div id="exp1" class="exp"><b>정답: 2번</b><br>해설: 특정 지질 시대를 나타내고 구분하는 데 기준이 되는 화석을 표준화석이라 합니다.</div>
       </div>
-      <div id="exp1" class="exp"><b>정답: 4번</b><br>해설: 표준화석은 특정 지질 시대를 대표하므로 생존 기간이 짧고 분포 면적이 넓어야 합니다. 삼엽충·공룡은 표준화석이며, 고사리·산호는 시상화석입니다.</div>
-    </div>
 
-    <!-- Q2 -->
-    <div class="q-card">
-      <div class="q-title">Q2. 지질 시대별 환경 및 생물계 변화에 대한 설명으로 옳지 않은 것은?</div>
-      <div class="options">
-        <label><input type="radio" name="q2" value="1"> 선캄브리아 시대 - 남세균의 광합성 결과 대기 중 산소 농도가 증가하였다.</label>
-        <label><input type="radio" name="q2" value="2"> 고생대 - 오존층(O₃) 형성으로 육상 생물이 최초로 등장하였다.</label>
-        <label><input type="radio" name="q2" value="3"> 중생대 - 판게아가 형성되어 해안선이 감소하고 대규모 대멸종이 발생하였다.</label>
-        <label><input type="radio" name="q2" value="4"> 신생대 - 속씨식물과 포유류가 크게 번성하였다.</label>
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 95%</span>
+        </div>
+        <div class="q-title">Q2. 지층이 형성될 당시의 자연환경을 알려주는 화석으로 가장 적절한 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q2" value="1"> 삼엽충</label>
+          <label><input type="radio" name="q2" value="2"> 암모나이트</label>
+          <label><input type="radio" name="q2" value="3"> 고사리</label>
+          <label><input type="radio" name="q2" value="4"> 화폐석</label>
+        </div>
+        <div id="exp2" class="exp"><b>정답: 3번</b><br>해설: 고사리는 따뜻하고 습한 육지 환경을 알려주는 시상화석입니다. 나머지 선택지는 표준화석입니다.</div>
       </div>
-      <div id="exp2" class="exp"><b>정답: 3번</b><br>해설: 거대 대륙인 판게아가 형성된 시기는 고생대 말입니다. 중생대에는 판게아가 분리되기 시작하며 해안선이 길어졌습니다.</div>
-    </div>
 
-    <!-- Q3 -->
-    <div class="q-card">
-      <div class="q-title">Q3. 다윈의 자연선택설에 관한 설명으로 가장 올바른 것은?</div>
-      <div class="options">
-        <label><input type="radio" name="q3" value="1"> 생물이 자주 사용하는 기관은 발달하고 사용하지 않는 기관은 퇴화하여 유전된다.</label>
-        <label><input type="radio" name="q3" value="2"> 환경 변화가 일어난 후 생물이 적응하기 위해 필요한 변이를 새로 만들어낸다.</label>
-        <label><input type="radio" name="q3" value="3"> 집단 내에 이미 존재하는 다양한 변이 중 환경에 유리한 개체가 생존하여 자손을 남긴다.</label>
-        <label><input type="radio" name="q3" value="4"> 과잉 생산으로 인한 생존 경쟁은 일어나지 않는다.</label>
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 90%</span>
+        </div>
+        <div class="q-title">Q3. 표준화석이 되기 위한 조건으로 옳은 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q3" value="1"> 생존 기간이 길고 분포 면적이 좁아야 한다.</label>
+          <label><input type="radio" name="q3" value="2"> 생존 기간이 길고 분포 면적이 넓어야 한다.</label>
+          <label><input type="radio" name="q3" value="3"> 생존 기간이 짧고 분포 면적이 좁아야 한다.</label>
+          <label><input type="radio" name="q3" value="4"> 생존 기간이 짧고 분포 면적이 넓어야 한다.</label>
+        </div>
+        <div id="exp3" class="exp"><b>정답: 4번</b><br>해설: 표준화석은 특정 시대에만 잠깐 살았어야 하고(생존 기간 짧음), 넓은 지역에 퍼져 있어야(분포 면적 넓음) 합니다.</div>
       </div>
-      <div id="exp3" class="exp"><b>정답: 3번</b><br>해설: 자연선택설 핵심 포인트! 변이는 환경 변화 이전에 이미 무작위로 집단 내에 존재하며, 그 중 환경에 적합한 개체가 선택됩니다. (1번은 라마르크의 용불용설)</div>
-    </div>
 
-    <!-- Q4 -->
-    <div class="q-card">
-      <div class="q-title">Q4. 생물다양성의 3가지 수준과 감소 원인에 대한 설명으로 옳은 것은?</div>
-      <div class="options">
-        <label><input type="radio" name="q4" value="1"> 유전적 다양성이 낮을수록 전염병이 발생했을 때 살아남을 확률이 높아진다.</label>
-        <label><input type="radio" name="q4" value="2"> 서식지 단편화는 중앙부 서식지 면적을 증가시키므로 생물 다양성에 유익하다.</label>
-        <label><input type="radio" name="q4" value="3"> 종 다양성이 높을수록 먹이 그물이 복잡해져 생태계 평형 유지에 유리하다.</label>
-        <label><input type="radio" name="q4" value="4"> 생태계 다양성은 특정 지역의 종 수에만 영향을 미치며 유전적 다양성과는 무관하다.</label>
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 90%</span>
+        </div>
+        <div class="q-title">Q4. 시상화석이 되기 위한 조건으로 옳은 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q4" value="1"> 생존 기간이 길고 특정 환경에서만 살아 분포 면적이 좁아야 한다.</label>
+          <label><input type="radio" name="q4" value="2"> 생존 기간이 짧고 모든 환경에서 잘 살아 분포 면적이 넓어야 한다.</label>
+          <label><input type="radio" name="q4" value="3"> 개체 수가 매우 적고 특정 시대에만 한정되어 살아야 한다.</label>
+          <label><input type="radio" name="q4" value="4"> 자외선에 강하고 주로 육지 환경에서만 살아야 한다.</label>
+        </div>
+        <div id="exp4" class="exp"><b>정답: 1번</b><br>해설: 시상화석은 환경을 특정해야 하므로 특정 환경에서 오래 살아온 생물(생존 기간 긴, 분포 면적 좁음)이어야 합니다.</div>
       </div>
-      <div id="exp4" class="exp"><b>정답: 3번</b><br>해설: 종 다양성이 높을수록 먹이사슬이 단순하지 않고 복잡하게 얽혀 생태계가 안정적으로 유지됩니다. 서식지 단편화는 중앙부 면적을 줄이고 가장자리를 늘려 생물에 부정적입니다.</div>
-    </div>
 
-    <button type="button" onclick="calcScore()">제출하고 정답 확인하기</button>
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q5. 고생대의 대표적인 표준화석으로만 짝지어진 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q5" value="1"> 공룡, 암모나이트</label>
+          <label><input type="radio" name="q5" value="2"> 삼엽충, 방추충, 갑주어</label>
+          <label><input type="radio" name="q5" value="3"> 화폐석, 매머드</label>
+          <label><input type="radio" name="q5" value="4"> 스트로마톨라이트, 에디아카라</label>
+        </div>
+        <div id="exp5" class="exp"><b>정답: 2번</b><br>해설: 고생대 바다에서는 삼엽충, 방추충(푸줄리나), 갑주어가 번성하였습니다.</div>
+      </div>
 
-    <div id="result" class="result"></div>
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q6. 최초로 광합성을 하여 대기와 바다에 산소를 공급한 생물은?</div>
+        <div class="options">
+          <label><input type="radio" name="q6" value="1"> 삼엽충</label>
+          <label><input type="radio" name="q6" value="2"> 남세균(사이아노박테리아)</label>
+          <label><input type="radio" name="q6" value="3"> 겉씨식물</label>
+          <label><input type="radio" name="q6" value="4"> 양치식물</label>
+        </div>
+        <div id="exp6" class="exp"><b>정답: 2번</b><br>해설: 선캄브리아 시대에 등장한 남세균이 최초로 광합성을 수행해 지구 대기에 산소를 공급했습니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 90%</span>
+        </div>
+        <div class="q-title">Q7. 대기 중 산소 농도가 증가하면서 형성되어 육상 생물 출현의 계기가 된 물질은?</div>
+        <div class="options">
+          <label><input type="radio" name="q7" value="1"> 오존층(O₃)</label>
+          <label><input type="radio" name="q7" value="2"> 이산화탄소(CO₂)</label>
+          <label><input type="radio" name="q7" value="3"> 질소층(N₂)</label>
+          <label><input type="radio" name="q7" value="4"> 메테인층(CH₄)</label>
+        </div>
+        <div id="exp7" class="exp"><b>정답: 1번</b><br>해설: 산소가 증가하면서 대기 상층부에 오존층이 형성되어 유해 자외선을 차단해 생물이 육상으로 진출할 수 있었습니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q8. 빙하기가 없어 전반적으로 매우 온난했던 지질 시대는?</div>
+        <div class="options">
+          <label><input type="radio" name="q8" value="1"> 선캄브리아 시대</label>
+          <label><input type="radio" name="q8" value="2"> 고생대</label>
+          <label><input type="radio" name="q8" value="3"> 중생대</label>
+          <label><input type="radio" name="q8" value="4"> 신생대</label>
+        </div>
+        <div id="exp8" class="exp"><b>정답: 3번</b><br>해설: 중생대는 지질 시대 중 유일하게 빙하기가 없이 전체적으로 기후가 온난했던 시대입니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 80%</span>
+        </div>
+        <div class="q-title">Q9. 신생대에 크게 번성한 식물군으로 가장 적절한 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q9" value="1"> 양치식물(고사리)</label>
+          <label><input type="radio" name="q9" value="2"> 겉씨식물(소나무, 소철)</label>
+          <label><input type="radio" name="q9" value="3"> 속씨식물(단풍나무, 참나무)</label>
+          <label><input type="radio" name="q9" value="4"> 해조류</label>
+        </div>
+        <div id="exp9" class="exp"><b>정답: 3번</b><br>해설: 신생대에는 속씨식물이 번성하였으며, 동물로는 포유류가 번성하였습니다. (양치식물은 고생대, 겉씨식물은 중생대)</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 90%</span>
+        </div>
+        <div class="q-title">Q10. 다윈의 자연선택설 과정에 포함되지 않는 단계는?</div>
+        <div class="options">
+          <label><input type="radio" name="q10" value="1"> 과잉 생산과 개체 변이</label>
+          <label><input type="radio" name="q10" value="2"> 생존 경쟁</label>
+          <label><input type="radio" name="q10" value="3"> 후천적 용불용적 발달</label>
+          <label><input type="radio" name="q10" value="4"> 자연 선택 및 진화</label>
+        </div>
+        <div id="exp10" class="exp"><b>정답: 3번</b><br>해설: 자주 쓰면 발달한다는 주장은 라마르크의 '용불용설'에 관한 내용으로, 다윈의 자연선택설과는 다릅니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q11. 같은 종이라도 얼룩말의 무늬가 서로 다르고 사람의 지문이 다른 것은 어떤 다양성에 해당하는가?</div>
+        <div class="options">
+          <label><input type="radio" name="q11" value="1"> 종 다양성</label>
+          <label><input type="radio" name="q11" value="2"> 유전적 다양성</label>
+          <label><input type="radio" name="q11" value="3"> 생태계 다양성</label>
+          <label><input type="radio" name="q11" value="4"> 환경 다양성</label>
+        </div>
+        <div id="exp11" class="exp"><b>정답: 2번</b><br>해설: 같은 종 내 개체들 사이에 존재하는 유전적 차이는 '유전적 다양성'입니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q12. 항생제를 지속적으로 사용하는 환경에서 항생제 내성 세균이 늘어나는 현상을 설명하는 원리는?</div>
+        <div class="options">
+          <label><input type="radio" name="q12" value="1"> 용불용설</label>
+          <label><input type="radio" name="q12" value="2"> 자연선택설</label>
+          <label><input type="radio" name="q12" value="3"> 서식지 단편화</label>
+          <label><input type="radio" name="q12" value="4"> 자발적 변이 생성설</label>
+        </div>
+        <div id="exp12" class="exp"><b>정답: 2번</b><br>해설: 항생제 투여 환경에서 내성을 가진 변이가 선택받아 증식하므로 자연선택의 예시입니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 90%</span>
+        </div>
+        <div class="q-title">Q13. 도로나 철도 건설로 인해 서식지가 조각나는 현상을 무엇이라 하는가?</div>
+        <div class="options">
+          <label><input type="radio" name="q13" value="1"> 서식지 단편화</label>
+          <label><input type="radio" name="q13" value="2"> 외래종 유입</label>
+          <label><input type="radio" name="q13" value="3"> 생태계 다양성 확충</label>
+          <label><input type="radio" name="q13" value="4"> 남획</label>
+        </div>
+        <div id="exp13" class="exp"><b>정답: 1번</b><br>해설: 서식지가 도로, 철도 등으로 조각나는 현상을 '서식지 단편화'라고 부릅니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 80%</span>
+        </div>
+        <div class="q-title">Q14. 서식지 단편화 문제를 완화하기 위한 국가적 보전 대책으로 가장 적절한 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q14" value="1"> 람사르 협약 체결</label>
+          <label><input type="radio" name="q14" value="2"> 생태 통로 설치</label>
+          <label><input type="radio" name="q14" value="3"> 쓰레기 분리배출</label>
+          <label><input type="radio" name="q14" value="4"> CITES 협약 체결</label>
+        </div>
+        <div id="exp14" class="exp"><b>정답: 2번</b><br>해설: 단편화된 서식지를 연결해 주어 생물의 이동을 돕는 것은 '생태 통로'입니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-easy">난이도: 하</span>
+          <span class="badge badge-prob">출제확률: 80%</span>
+        </div>
+        <div class="q-title">Q15. 습지를 보존하기 위해 체결된 대표적인 국제 협약은?</div>
+        <div class="options">
+          <label><input type="radio" name="q15" value="1"> CITES 협약</label>
+          <label><input type="radio" name="q15" value="2"> 람사르 협약</label>
+          <label><input type="radio" name="q15" value="3"> 바젤 협약</label>
+          <label><input type="radio" name="q15" value="4"> 기후변화협약</label>
+        </div>
+        <div id="exp15" class="exp"><b>정답: 2번</b><br>해설: 람사르 협약은 물새 서식지로서 국제적으로 중요한 습지를 보호하기 위한 협약입니다.</div>
+      </div>
+
+      <!-- 중간 난이도 (16~18번) -->
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-medium">난이도: 중</span>
+          <span class="badge badge-prob">출제확률: 92%</span>
+        </div>
+        <div class="q-title">Q16. 판게아(Pangaea) 형성과 분리에 대한 설명으로 옳지 않은 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q16" value="1"> 고생대 말에 대륙들이 모여 판게아가 형성되었다.</label>
+          <label><input type="radio" name="q16" value="2"> 판게아 형성으로 해안선 면적이 넓어져 서식지가 다양해졌다.</label>
+          <label><input type="radio" name="q16" value="3"> 중생대에 판게아가 분리되며 대서양과 인도양이 형성되었다.</label>
+          <label><input type="radio" name="q16" value="4"> 중생대의 판게아 분리는 서식지 환경을 다양하게 만들어 생물 다양성 증가에 기여했다.</label>
+        </div>
+        <div id="exp16" class="exp"><b>정답: 2번</b><br>해설: 대륙이 합쳐지면(판게아) 해안선 길이가 단축되고 면적이 감소하여 서식지가 줄어들고 대멸종의 원인이 됩니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-medium">난이도: 중</span>
+          <span class="badge badge-prob">출제확률: 95%</span>
+        </div>
+        <div class="q-title">Q17. 변이(Variation)와 자연선택에 관한 시험 핵심 오답 개념 중 올바른 설명은?</div>
+        <div class="options">
+          <label><input type="radio" name="q17" value="1"> 환경이 변하면 생물은 이에 맞춰 필요한 형질의 변이를 즉시 만들어낸다.</label>
+          <label><input type="radio" name="q17" value="2"> 변이는 자연선택을 받기 전에 집단 내에 이미 무작위로 존재하고 있었다.</label>
+          <label><input type="radio" name="q17" value="3"> 항생제를 살포하면 세균이 스스로 항생제 내성 유전자를 변이시켜 생성한다.</label>
+          <label><input type="radio" name="q17" value="4"> 획득 형질(후천적으로 발달한 형질)은 다음 세대에 유전된다.</label>
+        </div>
+        <div id="exp17" class="exp"><b>정답: 2번</b><br>해설: 변이는 환경 변화 '이전'에 이미 집단 내에 무작위로 존재하는 것이지, 환경에 맞춰 능동적으로 만들어내는 것이 아닙니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-medium">난이도: 중</span>
+          <span class="badge badge-prob">출제확률: 88%</span>
+        </div>
+        <div class="q-title">Q18. 서식지 단편화가 진행될 때 일어나는 생태계 변화로 옳은 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q18" value="1"> 서식지 중앙부 면적이 증가하고 가장자리 면적이 감소한다.</label>
+          <label><input type="radio" name="q18" value="2"> 서식지 중앙부 면적이 감소하고 가장자리 면적이 증가한다.</label>
+          <label><input type="radio" name="q18" value="3"> 중앙부와 가장자리 면적이 모두 동일하게 증가한다.</label>
+          <label><input type="radio" name="q18" value="4"> 면적에는 변화가 없고 교배만 활발해진다.</label>
+        </div>
+        <div id="exp18" class="exp"><b>정답: 2번</b><br>해설: 도로 등으로 조각나면 내부 깊은 곳인 '중앙부 면적'이 급감하고, 외부에 노출되는 '가장자리 면적'이 늘어납니다.</div>
+      </div>
+
+      <!-- 심화 난이도 (19~20번) -->
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-hard">난이도: 상 (심화)</span>
+          <span class="badge badge-prob">출제확률: 85%</span>
+        </div>
+        <div class="q-title">Q19. [심화] 유전적 다양성과 종 다양성 간의 관계에 관한 설명으로 가장 깊이 있게 분석한 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q19" value="1"> 유전적 다양성이 낮을수록 전염병 발생 시 생존 개체가 많아져 종 다양성이 보호된다.</label>
+          <label><input type="radio" name="q19" value="2"> 유전적 다양성이 높아야 환경 변화 시 적응할 수 있는 개체가 존재하므로, 종의 멸종을 막아 종 다양성을 유지하는 기반이 된다.</label>
+          <label><input type="radio" name="q19" value="3"> 종 다양성과 유전적 다양성은 서로 독립적이므로 한쪽이 감소해도 다른 쪽에 영향을 미치지 않는다.</label>
+          <label><input type="radio" name="q19" value="4"> 특정 생태계 내 개체 수가 많으면 유전적 다양성과 상관없이 종 다양성은 언제나 최대가 된다.</label>
+        </div>
+        <div id="exp19" class="exp"><b>정답: 2번</b><br>해설: 유전적 다양성이 높은 집단은 급격한 전염병이나 환경 변화 시 살아남는 개체가 존재하므로, 해당 종의 멸종을 방지하고 결과적으로 종 다양성을 지키는 근본 바탕이 됩니다.</div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-header">
+          <span class="badge badge-hard">난이도: 상 (심화)</span>
+          <span class="badge badge-prob">출제확률: 80%</span>
+        </div>
+        <div class="q-title">Q20. [심화] 지질 시대 대멸종 및 환경 변화 과정 종합 분석 중 잘못 해석된 것은?</div>
+        <div class="options">
+          <label><input type="radio" name="q20" value="1"> 선캄브리아 시대 말기 에디아카라 동물군 등장 전, 대기 및 바다 산소 공급이 전제 조건이었다.</label>
+          <label><input type="radio" name="q20" value="2"> 고생대 말 판게아 형성으로 인한 해안선 단축은 고생대 대멸종의 주요 원인 중 하나이다.</label>
+          <label><input type="radio" name="q20" value="3"> 중생대 말 소행성 충돌 및 화산 폭발로 인해 공룡과 삼엽충이 동시에 멸종하였다.</label>
+          <label><input type="radio" name="q20" value="4"> 신생대 후기에는 4번의 빙하기와 3번의 간빙기가 교대로 나타나 생물계 분포에 영향을 주었다.</label>
+        </div>
+        <div id="exp20" class="exp"><b>정답: 3번</b><br>해설: 삼엽충은 고생대 말 대멸종 때 이미 멸종하였습니다. 중생대 말 대멸종으로 사라진 대표 생물은 공룡과 암모나이트입니다.</div>
+      </div>
+
+      <button type="button" onclick="calcScore()">제출하고 정답 확인하기</button>
+      <div id="result" class="result"></div>
+    </form>
   </div>
 
   <script>
     function calcScore() {
-      const answers = { q1: "4", q2: "3", q3: "3", q4: "3" };
+      const answers = {
+        q1: "2", q2: "3", q3: "4", q4: "1", q5: "2",
+        q6: "2", q7: "1", q8: "3", q9: "3", q10: "3",
+        q11: "2", q12: "2", q13: "1", q14: "2", q15: "2",
+        q16: "2", q17: "2", q18: "2", q19: "2", q20: "3"
+      };
       let score = 0;
-      let total = 4;
+      let total = 20;
 
       for (let key in answers) {
         const selected = document.querySelector(`input[name="${key}"]:checked`);
@@ -94,7 +363,7 @@
 
       const resDiv = document.getElementById('result');
       resDiv.style.display = 'block';
-      resDiv.innerHTML = `채점 완료: 총 ${total}문제 중 ${score}문제를 맞혔습니다!`;
+      resDiv.innerHTML = `채점 완료: 총 ${total}문제 중 ${score}문제를 맞혔습니다! (${Math.round(score/total*100)}점)`;
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
   </script>
